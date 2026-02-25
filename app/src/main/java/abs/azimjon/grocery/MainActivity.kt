@@ -1,5 +1,6 @@
 package abs.azimjon.grocery
 
+import abs.azimjon.grocery.ui.navigation.NavGraph
 import abs.azimjon.grocery.ui.screens.login.Login
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -14,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import abs.azimjon.grocery.ui.theme.GroceryTheme
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.compose.rememberNavController
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +23,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GroceryTheme {
-                Login(modifier = Modifier, viewModel())
+
+                var navcontroller = rememberNavController()
+
+                NavGraph(modifier = Modifier, navController = navcontroller)
             }
         }
     }
