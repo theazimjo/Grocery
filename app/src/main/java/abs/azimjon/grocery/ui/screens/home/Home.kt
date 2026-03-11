@@ -23,6 +23,6 @@ fun Home(modifier: Modifier = Modifier, viewmodel: HomeViewModel) {
     Box(
         modifier.fillMaxSize(), contentAlignment = Alignment.Center
     ) {
-     Text("HOME")
+
     }
 }
