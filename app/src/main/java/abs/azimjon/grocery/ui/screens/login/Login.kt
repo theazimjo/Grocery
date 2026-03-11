@@ -68,7 +68,7 @@ fun Login(modifier: Modifier = Modifier, viewmodel: LoginViewmodel, navigator: N
 //                    Asosiy login qismi
                     scope.launch {
                         try {
-                            navigator.navigate("home")
+                            navigator.navigate("main")
                             viewmodel.login(UserLogin(username, password, expiresInMins))
                             status = "Succes"
                         } catch (e: Exception) {
